@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title : string = 'Modular Maze';
+
+  // navItems = {[
+  //   "text1": 'asdf'
+  // ]}
+
+  //Fel format
+  menuItems[]: [
+    { item: 'MODULES' },
+    { item: 'CABLES' },
+    { item: 'POWERSUPPLIES' },
+    { item: 'CASES' }
+]
 }
