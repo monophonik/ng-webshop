@@ -1,2 +1,5 @@
 <p>nav-bar works!</p>
-<p>{{navData}}</p>
+<!-- <p>{{navData}}</p> -->
+<ul *ngFor="let navItem of navItems">
+    <li>{{navItem.name}}</li>
+</ul>

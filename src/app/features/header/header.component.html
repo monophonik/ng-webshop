@@ -1,4 +1,6 @@
 <p>header works!</p>
 <p>header {{testData}}</p>
-<app-cart></app-cart>
-<app-nav-bar></app-nav-bar>
+<ul>
+    <li><a routerLink="/cart" routerLinkActive="active" title="Shopping cart">Cart</a></li>
+</ul>
+<app-nav-bar [navItems]=navData></app-nav-bar>

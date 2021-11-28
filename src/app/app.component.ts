@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ILink } from './shared/models/Ilink';
 
 @Component({
   selector: 'app-root',
@@ -6,17 +7,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title : string = 'Modular Maze';
+  title: string = 'Modular Maze';
 
-  // navItems = {[
-  //   "text1": 'asdf'
-  // ]}
+  /**
+   *
+   */
+  constructor() {
+  
+  }
+  //Skicka till navbar med output/input
+  //navData: ILink = {name: 'item1', title: 'item2', path: 'path1'};
 
-  //Fel format
-  menuItems[]: [
-    { item: 'MODULES' },
-    { item: 'CABLES' },
-    { item: 'POWERSUPPLIES' },
-    { item: 'CASES' }
-]
+  // item1: ILink = {name: 'Modules', title: 'Modules', path: 'url/modules'};
+
+  //navItems = [] 
+  
+  // = [
+  //   { item: 'MODULES' },
+  //   { item: 'CABLES' },
+  //   { item: 'POWERSUPPLIES' },
+  //   { item: 'CASES' }
+  // ]
+
+  // menuItems = [
+  //   'stringasdf',
+  //   8,
+  //   { item: 'llök', item3: 9},
+  //   ['poi', 9]
+  // ]
 }
