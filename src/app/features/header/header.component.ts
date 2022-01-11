@@ -11,7 +11,8 @@ import { ILink } from 'src/app/shared/models/Ilink';
 })
 export class HeaderComponent implements OnInit {
 
-  testData: string = 'test';
+  title: string = 'Modular Maze';
+  testData: string = 'blablatest';
   navData: ILink[] = [
     {
       name: 'item1',

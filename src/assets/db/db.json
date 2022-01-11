@@ -3,7 +3,7 @@
         {
             "articlenr": "010001",
             "dateadded": "2021-09-09",
-            "showcase": false,
+            "showcase": true,
             "manufacturer": "Make Noise",
             "name": "Maths",
             "function": "Function generator",
@@ -29,7 +29,7 @@
         {
             "articlenr": "010003",
             "dateadded": "2021-09-23",
-            "showcase": false,
+            "showcase": true,
             "manufacturer": "Doepfer",
             "name": "A-131",
             "function": "VCA",
@@ -42,7 +42,7 @@
         {
             "articlenr": "010004",
             "dateadded": "2021-09-23",
-            "showcase": false,
+            "showcase": true,
             "manufacturer": "Make Noise",
             "name": "STO",
             "function": "Oscillator",
@@ -92,7 +92,7 @@
             "hp": "104",
             "price": 3499,
             "image": "https://tiptopaudio.com/new/wp-content/uploads/2016/09/1280_01.png",
-            "description": "MATHS builds on the tradition set into motion in the 1960s when Don Buchla adapted circuits found within analog computers for musical purposes. Buchla's Algebraic Processor, Model 257 and 281 changed the way music synthesizers utilize control voltages. MATHS continues this great tradition - sculpting the voltages we use to sculpt sounds."
+            "description": "Mantis case"
         }
     ],
 

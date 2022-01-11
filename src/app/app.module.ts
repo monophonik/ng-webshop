@@ -6,12 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeaturesModule } from './features/features.module';
-//import { ServicesModule } from './services/services.module';
+import { ServicesModule } from './services/services.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +19,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     SharedModule,
     FeaturesModule,
-    CommonModule
+    CommonModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

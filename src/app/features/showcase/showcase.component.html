@@ -1,0 +1,14 @@
+<p>showcase works!</p>
+<p>Showcase products</p>
+<ul>
+    <!-- fixa länk -->
+    <ng-container *ngFor="let item of modules | async">
+        <a [routerLink]="['/product', item.articlenr]" routerLinkActive="active" title="{{item.name}}">
+            <li *ngIf="item.showcase">
+                
+                Module name: {{item.name}}
+                <img src="{{item.image}}" alt="{{item.name}}">
+            </li>
+        </a>
+    </ng-container>
+</ul>
