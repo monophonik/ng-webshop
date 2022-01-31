@@ -13,16 +13,23 @@ export class HeaderComponent implements OnInit {
 
   title: string = 'Modular Maze';
   testData: string = 'blablatest';
+  
+  //Ta bort title eller name?
   navData: ILink[] = [
     {
-      name: 'item1',
-      title: 'itemOne',
-      path: 'path1'
+      name: 'Modules',
+      title: 'Modules',
+      path: '/modules'
     },
     {
-      name: 'item2',
-      title: 'itemTwo',
-      path: 'path2'
+      name: 'Eurorack Cases',
+      title: 'Eurorack Cases',
+      path: '/cases'
+    },
+    {
+      name: 'Start',
+      title: 'Start',
+      path:'/home'
     }
   ];
 

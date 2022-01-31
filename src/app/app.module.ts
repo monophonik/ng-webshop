@@ -20,7 +20,8 @@ import { SharedModule } from './shared/shared.module';
     SharedModule,
     FeaturesModule,
     CommonModule,
-    ServicesModule
+    //Behövs ej pga dependency injection
+    //ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

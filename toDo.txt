@@ -1,0 +1,9 @@
+- Byt databas i data-access till mock-data.
+- Form med verifiering till checkout.
+- Form till admin med post, put, och patch samt verifiering.
+- Add to cart ska uppdatera db med patch (eller put?).
+- Cart ska kunna lägga till och ta bort varor.
+- Checkout ska sammanställa order med frakt.
+- Admin kan ha dropdown för att välja kategori? Ex "module".
+
+Använda mock-data i dataAccess? Hur ser sökvägen med Get()?

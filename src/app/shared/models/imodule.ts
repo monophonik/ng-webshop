@@ -1,7 +1,4 @@
-import { Categories } from "../enums/categories";
-
-export interface IProduct {
-    category: Categories,
+export interface IModule {
     articlenr: string,
     dateadded: string,
     stock: number,
@@ -10,7 +7,7 @@ export interface IProduct {
     name: string,
     function: string,
     hp: string,
-    price: number,
+    price: string,
     image: string,
     description: string
 }

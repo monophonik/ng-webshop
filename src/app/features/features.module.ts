@@ -12,6 +12,9 @@ import { Router, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { ModulesComponent } from './modules/modules.component';
+import { CasesComponent } from './cases/cases.component';
 
 
 
@@ -24,7 +27,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     FooterComponent,
     ProductComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddToCartComponent,
+    ModulesComponent,
+    CasesComponent
   ],
   imports: [
     CommonModule,
@@ -41,6 +47,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     FooterComponent,
     ProductComponent,
+    ModulesComponent,
+    CasesComponent,
     PageNotFoundComponent
   ]
 })
