@@ -1,16 +1,16 @@
-<p>showcase works!</p>
-<p>Showcase products</p>
+<p>Here's a selection of our finest products</p>
 <ul>
     <!-- tog bort li *ngIf showcase == true -->
     <ng-container *ngFor="let item of showProducts | async">
 
         <li>
-            <a [routerLink]="['/product', item.articlenr]" routerLinkActive="active" title="{{item.name}}">
+            <a [routerLink]="['/product', item.id]" routerLinkActive="active" title="{{item.name}}">
                 Module name: {{item.name}}
                 <img src="{{item.image}}" alt="{{item.name}}">
             </a>
+            <p>Price: {{item.price}} sek</p>
             <!-- ändrat från [stock] till [articleNr] -->
-            <app-add-to-cart [articleNr]=item.articlenr></app-add-to-cart>
+            <app-add-to-cart [id]=item.id></app-add-to-cart>
         </li>
 
 

@@ -1,15 +1,15 @@
-<p>modules works!</p>
 <p>Eurorack modules</p>
 <ul>
     <!-- fixa länk -->
     <ng-container *ngFor="let item of modules | async">
 
         <li>
-            <a [routerLink]="['/product', item.articlenr]" routerLinkActive="active" title="{{item.name}}">
+            <a [routerLink]="['/product', item.id]" routerLinkActive="active" title="{{item.name}}">
                 Module name: {{item.name}}
                 <img src="{{item.image}}" alt="{{item.name}}">
             </a>
-            <app-add-to-cart [articleNr]=item.articlenr></app-add-to-cart>
+            <p>Price: {{item.price}} sek</p>
+            <app-add-to-cart [id]=item.id></app-add-to-cart>
         </li>
 
 

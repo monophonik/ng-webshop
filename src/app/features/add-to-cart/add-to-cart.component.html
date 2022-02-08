@@ -1,4 +1,8 @@
 
     <!-- <div *ngIf="inStock; else elseBlock"><button (click)="addToCart()">Add to cart</button></div> -->
+    <!-- Användes -->
+    <!-- <div *ngIf="product.stock >= 1; else elseBlock"><button (click)="addToCart()">Add to cart</button></div> -->
+    <!-- test -->
     <div *ngIf="product.stock >= 1; else elseBlock"><button (click)="addToCart()">Add to cart</button></div>
+    <!-- <div><button (click)="addToCart()">Add to cart</button></div> -->
     <ng-template #elseBlock><button disabled>Out of stock</button></ng-template>

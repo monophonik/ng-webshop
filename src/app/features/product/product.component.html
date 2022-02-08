@@ -1,1 +1,8 @@
-<p>product works!</p>
+<div *ngIf="product; else elseBlock">
+    <h3>{{product.name}}</h3>
+    <img src="{{product.image}}" alt="{{product.name}}">
+    <p>Price: {{product.price}} sek</p>
+    <app-add-to-cart [id]=product.id></app-add-to-cart>
+    <p>{{product.description}}</p>
+</div>
+<ng-template #elseBlock><p>Product not found</p></ng-template>

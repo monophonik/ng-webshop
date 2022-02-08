@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
   //Ta bort title eller name?
   navData: ILink[] = [
     {
-      name: 'Modules',
-      title: 'Modules',
+      name: 'Eurorack Modules',
+      title: 'Eurorack Modules',
       path: '/modules'
     },
     {

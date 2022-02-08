@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { IProduct } from 'src/app/shared/models/Iproduct';
 
 import { Observable, throwError } from 'rxjs';
@@ -14,6 +14,7 @@ export class DataAccessService {
 
   //private url: string = 'assets/db/db.json';
   private url: string = 'http://localhost:3000';
+  private url2: string = 'C:/users/Ny Användare/OneDrive/Skrivbord/Web/webshop-ng/ng-webshop/src/mock-data/db.json';
 
   //private products: any;
 
@@ -45,9 +46,20 @@ export class DataAccessService {
     //return this.products;
   }
 
-  dbSingleProduct(articleNr: string): Observable<IProduct> {
-    return this.http.get<IProduct>(`${this.url}/products/${articleNr}`);
+  dbSingleProduct(id: number): Observable<IProduct> {
+    return this.http.get<IProduct>(`${this.url}/products/${id}`);
   }
+
+  
+  updateProduct(id: number, toUpdate: string) {
+    var headers = new HttpHeaders().set('Content-Type', 'application/json');
+    this.http.patch(`${this.url}/products/${id}`, toUpdate, {headers: headers}).subscribe();
+  }
+
+  // inStock(id: number): Observable<boolean> {
+  //   return this.http.get<IProduct>(`${this.url}/products/${id}`).pipe(item => );
+    
+  // }
 
   showcaseProductsWithMap() {
     return this.http.get(this.url).pipe(map((response: any) => response)) //Kanske ta bort <JSON>?

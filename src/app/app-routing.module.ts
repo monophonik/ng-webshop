@@ -19,7 +19,7 @@ const routes: Routes = [
     component: ShowcaseComponent
   },
   {
-    path: 'product/:articlenr',
+    path: 'product/:id',
     component: ProductComponent
   },
   {
