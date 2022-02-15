@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { DataAccessService } from 'src/app/services/data-access.service';
 import { IProduct } from 'src/app/shared/models/Iproduct';
+import { TaxPipe } from 'src/app/shared/pipes/tax-pipe';
 
 @Component({
   selector: 'app-cart',
@@ -12,9 +13,13 @@ import { IProduct } from 'src/app/shared/models/Iproduct';
 })
 export class CartComponent implements OnInit {
 
-  productsId: number[] = [];
+  productsId: any[] = [];
   cartProducts: IProduct[] = [];
   products$!: Observable<IProduct>[];
+  getProducts: any;
+
+  totalPrice: number = 0;
+  totalPriceNoTax: number = 0;
 
   constructor(
     private dataAccess: DataAccessService,
@@ -23,25 +28,58 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     //Flytta till CartService???
-    let getProducts;
-    getProducts = localStorage.getItem("cart");
-    console.log("Localstorage get: " + getProducts);
+    this.loadCart();
 
-    if (getProducts) {
+  }
+
+  loadCart() {
+    this.totalPrice = 0;
+    this.getProducts = null;
+    this.cartProducts.splice(0);
+
+    this.getProducts = localStorage.getItem("cart");
+    console.log("Localstorage get: " + this.getProducts);
+
+    if (this.getProducts) {
       console.log("getProducts == true");
-      this.productsId = JSON.parse(getProducts);
+      this.productsId = JSON.parse(this.getProducts);
       console.log("productsId array (after JSON.parse): " + this.productsId.toString());
       let arr = [1, 1, 4, 2];
       console.log(arr);
-      console.log("");
+
       this.productsId.forEach(id => {
         console.log("Inne i forEach. Id: " + id);
-        //Testa utan subscribe på slutet
-        this.dataAccess.dbSingleProduct(id).pipe(map(item => {console.log("Inne i observable. Item: " + item.articlenr), this.cartProducts.push(item), console.log("Products in cart: " + this.cartProducts);})).subscribe();
+    
+        this.dataAccess.dbSingleProduct(id).pipe(map(item => {
+          console.log("Inne i observable. Item: " + item.articlenr),
+          this.cartProducts.push(item),
+          this.totalPrice += item.price,
+          console.log("Products in cart: " + this.cartProducts);
+        })).subscribe();
       });
-      
-      //this.products$ = this.dataAccess.dbProducts().pipe(map(product => { }));
+
     }
+  }
+
+  removeFromCart(id: number) {
+
+    if (this.productsId) {
+
+      for (let i = 0; i < this.productsId.length; i++) {
+        if (this.productsId[i] == id) {
+          this.productsId.splice(i, 1),
+            localStorage.setItem("cart", JSON.stringify(this.productsId));
+          this.loadCart();
+          return;
+        }
+
+      }
+    }
+    else {
+      alert("Something went wrong")
+    }
+
+    alert(id);
   }
 
 }

@@ -16,7 +16,7 @@ export class CartService {
   addToCart() {
 
     console.log("Product stocks snap: " + this.product.stock);
-    this.product.stock --;
+    this.product.stock--;
     console.log("Updated product stock snap after add to cart: " + this.product.stock);
     // var update = JSON.stringify({ "stock": this.product.stock });
     // this.dataAccess.updateProduct(this.product.id, update);
@@ -26,51 +26,59 @@ export class CartService {
     console.log(expire);
     let timeNow = new Date();
     let cartObj;
-    
-    if (expire)
-    {
+
+    if (expire) {
       console.log("expire not null")
       let expireTime = JSON.parse(expire);
       console.log("Parsed existing expire time" + expireTime)
-      if (timeNow > expireTime)
-      {
+      if (timeNow > expireTime) {
         localStorage.clear();
-        
+
       }
-      else
-      {
+      else {
         console.log("Cart has not expired");
         let newExpireTime = new Date();
-        newExpireTime.setTime(timeNow.getTime() + (30*60000));
+        newExpireTime.setTime(timeNow.getTime() + (30 * 60000));
         console.log("New expire time after add" + newExpireTime);
         localStorage.setItem("expire", JSON.stringify(newExpireTime))
       }
     }
-    else
-    {
-      {
-        let newExpireTime = new Date();
-        newExpireTime.setTime(timeNow.getTime() + (30*60000));
-        console.log(newExpireTime);
-        localStorage.setItem("expire", JSON.stringify(newExpireTime))
-      }
+    else {
+
+      let newExpireTime = new Date();
+      newExpireTime.setTime(timeNow.getTime() + (30 * 60000));
+      console.log(newExpireTime);
+      localStorage.setItem("expire", JSON.stringify(newExpireTime))
+
     }
-    
-    if (cartStr)
-    {
+
+    if (cartStr) {
       cartObj = JSON.parse(cartStr);
       console.log("Cart in localStorage before add: " + cartObj.toString());
       cartObj.push(this.product.id);
       localStorage.setItem("cart", JSON.stringify(cartObj));
       console.log("Cart in localStorage after add: " + localStorage.getItem("cart"))
     }
-    else
-    {
+    else {
       let newCart = [this.product.id]
       localStorage.setItem("cart", JSON.stringify(newCart));
       console.log("Cart in localStorage: " + localStorage.getItem("cart"));
     }
 
     alert("Added to cart");
+  }
+
+  removeItem(id: number) {
+
+  }
+
+  checkExpiration() {
+
+    let getExpire = localStorage.getItem("expire");
+
+    if (getExpire) {
+
+    }
+    
   }
 }

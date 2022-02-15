@@ -53,30 +53,30 @@ export class AddToCartComponent implements OnInit {
     let timeNow = new Date();
     let cartObj;
 
-    if (expire) {
-      console.log("expire not null")
-      let expireTime = JSON.parse(expire);
-      console.log("Parsed existing expire time" + expireTime)
-      if (timeNow > expireTime) {
-        localStorage.clear();
+    // if (expire) {
+    //   console.log("expire not null")
+    //   let expireTime = JSON.parse(expire);
+    //   console.log("Parsed existing expire time" + expireTime)
+    //   if (timeNow > expireTime) {
+    //     localStorage.clear();
 
-      }
-      else {
-        console.log("Cart has not expired");
-        let newExpireTime = new Date();
-        newExpireTime.setTime(timeNow.getTime() + (30 * 60000));
-        console.log("New expire time after add" + newExpireTime);
-        localStorage.setItem("expire", JSON.stringify(newExpireTime))
-      }
-    }
-    else {
+    //   }
+    //   else {
+    //     console.log("Cart has not expired");
+    //     let newExpireTime = new Date();
+    //     newExpireTime.setTime(timeNow.getTime() + (30 * 60000));
+    //     console.log("New expire time after add" + newExpireTime);
+    //     localStorage.setItem("expire", JSON.stringify(newExpireTime))
+    //   }
+    // }
+    // else {
 
-      let newExpireTime = new Date();
-      newExpireTime.setTime(timeNow.getTime() + (30 * 60000));
-      console.log(newExpireTime);
-      localStorage.setItem("expire", JSON.stringify(newExpireTime))
+    //   let newExpireTime = new Date();
+    //   newExpireTime.setTime(timeNow.getTime() + (30 * 60000));
+    //   console.log(newExpireTime);
+    //   localStorage.setItem("expire", JSON.stringify(newExpireTime))
 
-    }
+    // }
 
     if (cartStr) {
       cartObj = JSON.parse(cartStr);

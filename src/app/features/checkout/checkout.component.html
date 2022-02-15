@@ -1,0 +1,80 @@
+<div *ngIf="!orderCompleted; else elseBlock">
+<h2>Checkout</h2>
+<div *ngIf="cartProducts">
+    <h3>Products in cart</h3>
+    <ul class="cartlist">
+        <ng-container *ngFor="let item of cartProducts">
+            <li>
+                <a [routerLink]="['/product', item.id]" routerLinkActive="active" title="{{item.name}}">
+                    Product name: {{item.name}}
+                </a>
+                <p>Price: {{item.price}} sek</p>
+            </li>
+        </ng-container>
+    </ul>
+    <br>
+    <br>
+</div>
+<ng-template #elseBlock>
+    <p>Your cart is empty</p>
+</ng-template>
+
+<div>
+    <h3>Complete your order</h3>
+    <form class="form" [formGroup]="orderForm" (ngSubmit)="submitOrder()">
+        <label>
+            First name:
+            <input type="text" formControlName="firstName">
+        </label>
+        <br>
+        <label>
+            Last Name:
+            <input type="text" formControlName="lastName">
+        </label>
+        <br>
+        <label>
+            Street:
+            <input type="text" formControlName="street">
+        </label>
+        <br>
+        <label>
+            Postal code:
+            <input type="text" formControlName="postalcode">
+        </label>
+        <br>
+        <label>
+            City:
+            <input type="text" formControlName="city">
+        </label>
+        <br>
+        <label>
+            Telepone:
+            <input type="text" formControlName="telephone">
+        </label>
+        <br>
+        <label>
+            Email:
+            <input type="text" formControlName="email">
+        </label>
+        <br>
+        <label>
+            Delivery method:
+            <select formControlName="delivery">
+                <option value="">Delivery</option>
+                <option value="{{del.price}}" *ngFor="let del of deliveryOptions">{{del.carrier}}, {{del.price}} sek
+                </option>
+            </select>
+        </label>
+        <br>
+        <div>
+            <p>Total price with shipping: {{totalShipping}}</p>
+            <p>An invoice with payment details will be sent to your email.</p>
+        </div>
+        <br>
+        <button type="submit" [disabled]="orderForm.invalid">Submit order</button>
+    </form>
+</div>
+</div>
+<ng-template #elseBlock>
+    <h2>Thank you for your order!</h2>
+</ng-template>

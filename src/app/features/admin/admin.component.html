@@ -1,1 +1,73 @@
-<p>admin works!</p>
+<h2>Product administration</h2>
+<!-- <div>
+    <h4>Edit existing product</h4>
+    <select [(ngModel)]="selectedToEdit">
+        <option *ngFor="let product of allProducts" [value]="product.id">id: {{product.id}}, {{product.name}}</option>
+    </select>
+    <pre>{{selectedToEdit}}</pre>
+</div> -->
+
+<div>
+    <h4>Add new product</h4>
+    <form class="form" [formGroup]="addProductForm" (ngSubmit)="submitProduct()">
+    <label>
+        Name: 
+        <input type="text" formControlName="name" placeholder="Required">
+    </label>
+    <br>
+    <label>
+        Manufacturer: 
+        <input type="text" formControlName="manufacturer" placeholder="Required">
+    </label>
+    <br>
+    <label>
+        Category:
+        <select formControlName="category">
+            <option value="">Select a category</option>
+            <option *ngFor="let cat of categories">{{cat}}</option>
+        </select>
+    </label>
+    <br>
+    <label>
+        Article nr: 
+        <input type="text" formControlName="articlenr" placeholder="Six numbers">
+    </label>
+    <br>
+    <label>
+        Function: 
+        <input type="text" formControlName="function" placeholder="Function of the product">
+    </label>
+    <br>
+    <label>
+        Hp: 
+        <input type="text" formControlName="hp" placeholder="Hp of module or case">
+    </label>
+    <br>
+    <label>
+        Price:  
+        <input type="text" formControlName="price" placeholder="Required">
+    </label>
+    <br>
+    <label>
+        Description: 
+        <input type="text" formControlName="description" placeholder="Required">
+    </label>
+    <br>
+    <label>
+        Stock: 
+        <input type="text" formControlName="stock" placeholder="Required">
+    </label>
+    <br>
+    <label>
+        Image: 
+        <input type="text" formControlName="image" placeholder="Valid URL">
+    </label>
+    <br>
+    <label>
+        Showcase product: 
+        <input type="checkbox" formControlName="showcase">
+    </label>
+    <br>
+      <button type="submit" [disabled]="addProductForm.invalid">Submit</button>
+    </form>
+</div>

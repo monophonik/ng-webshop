@@ -1,9 +1,7 @@
 <div class="grid-container">
-<app-header>{{ title }}</app-header>
-<p>The most amMAZING modules ever.</p>
-<main>
-<router-outlet></router-outlet>
-</main>
-<app-admin></app-admin>
-<app-footer></app-footer>
+    <app-header class="header">{{ title }}</app-header>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+    <app-footer class="footer"></app-footer>
 </div>

@@ -1,12 +1,11 @@
-<h3>Your most amMAZING online retailer for everything modular</h3>
-<p>Here's a selection of our finest products</p>
+<h4>Eurorack accessories</h4>
 <ul>
-    <!-- tog bort li *ngIf showcase == true -->
-    <ng-container *ngFor="let item of showProducts | async">
+
+    <ng-container *ngFor="let item of accessories | async">
 
         <li>
             <a [routerLink]="['/product', item.id]" routerLinkActive="active" title="{{item.name}}">
-                Module name: {{item.name}}
+                {{item.name}}
                 <img src="{{item.image}}" alt="{{item.name}}">
             </a>
             <p>Price: {{item.price}} sek</p>

@@ -15,6 +15,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { ModulesComponent } from './modules/modules.component';
 import { CasesComponent } from './cases/cases.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccessoriesComponent } from './accessories/accessories.component';
+import { OrderCompleteComponent } from './order-complete/order-complete.component';
+import { TaxPipe } from '../shared/pipes/tax-pipe';
 
 
 
@@ -30,17 +35,24 @@ import { CasesComponent } from './cases/cases.component';
     PageNotFoundComponent,
     AddToCartComponent,
     ModulesComponent,
-    CasesComponent
+    CasesComponent,
+    CheckoutComponent,
+    AccessoriesComponent,
+    OrderCompleteComponent,
+    TaxPipe
   ],
   imports: [
     CommonModule,
     ServicesModule,
     SharedModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     CartComponent,
+    CheckoutComponent,
     AdminComponent,
     ShowcaseComponent,
     NavBarComponent,
@@ -49,6 +61,8 @@ import { CasesComponent } from './cases/cases.component';
     ProductComponent,
     ModulesComponent,
     CasesComponent,
+    AccessoriesComponent,
+    OrderCompleteComponent,
     PageNotFoundComponent
   ]
 })

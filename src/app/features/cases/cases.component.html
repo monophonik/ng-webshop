@@ -1,1 +1,17 @@
-<p>cases works!</p>
+<h4>Eurorack cases</h4>
+<ul>
+
+    <ng-container *ngFor="let item of cases | async">
+
+        <li>
+            <a [routerLink]="['/product', item.id]" routerLinkActive="active" title="{{item.name}}">
+                {{item.name}}
+                <img src="{{item.image}}" alt="{{item.name}}">
+            </a>
+            <p>Price: {{item.price}} sek</p>
+            <app-add-to-cart [id]=item.id></app-add-to-cart>
+        </li>
+
+
+    </ng-container>
+</ul>

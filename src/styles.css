@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+/* Grid */
+
+.grid-container {
+    display: grid;
+    justify-content: space-around;
+
+    /* grid-template-rows: 1fr min-content; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        ". . main main main main main main main main . ."
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    
+    
+
+}
+
+
+/* Elements */
+
+main {
+    grid-area: main;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+li {
+    flex: 0 0 33.333333%;
+    margin: 5px;
+    padding: 10px;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:link {
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+a:visited{
+  color: antiquewhite; 
+  text-decoration: none; 
+}
+
+app-cart {
+    color: black;
+    display: block;
+}
+
+main a:link {
+    color: black;
+    text-decoration: none;
+}
+
+main a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Classes */
+
+.header {
+    grid-area: header;
+    background-color: black;
+    color: antiquewhite;
+}
+
+.header h1 {
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 5%;
+    
+}
+
+.form {
+    padding: 5px;
+}
+
+.form input {
+    margin: 3px;
+    padding: 3px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: black;
+    margin-top: 18%;
+    margin-bottom: 0%;
+}
+
+.navbar {
+    color: darkkhaki;
+}
+
+.navUl {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.navUl li {
+    flex: 0 0 33.333333%;
+    
+}
+
+/* .navUl a {
+    color: whitesmoke;
+    
+} */
+
+.cartLink {
+    color: whitesmoke;
+    position: relative;
+    left: 90%;
+}
+
+.cartlist {
+    color: black;
+    display: inline;
+}
+
+.cartlist a {
+    color: black;
+}
+
+
+
+/* Id */
+
+#checkoutBtn {
+    margin: 7%;
+    padding: 3px;
+    
+}

@@ -1,15 +1,22 @@
-<p>Cart</p>
+<h3>This is your cart</h3>
 
 <div *ngIf="cartProducts">
-<ul>
+<ul class="cartlist">
     <ng-container *ngFor="let item of cartProducts">
         <li>
             <a [routerLink]="['/product', item.id]" routerLinkActive="active" title="{{item.name}}">
-                Module name: {{item.name}}
+                Product name: {{item.name}}
             </a>
+            <p>Price: {{item.price}} sek</p>
+            <button (click)="removeFromCart(item.id)">Remove</button>
         </li>
     </ng-container>
 </ul>
+<br>
+<p>Total price: {{totalPrice}} sek</p>
+<p>Total price (excl. tax): {{totalPrice | tax}} sek</p>
+<br>
+<button id="checkoutBtn" [routerLink]="['/checkout']" routerLinkActive="active" title="Checkout">Checkout</button>
 </div>
 <ng-template #elseBlock>
     <p>Your cart is empty</p>

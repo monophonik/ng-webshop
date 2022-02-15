@@ -1,5 +1,4 @@
-<p>nav-bar works!</p>
 <!-- <p>{{navData}}</p> -->
-<ul *ngFor="let navItem of navItems">
+<ul class="navUl" *ngFor="let navItem of navItems">
     <li><a routerLink={{navItem.path}} routerLinkActive="active" title={{navItem.name}}>{{navItem.name}}</a></li>
 </ul>

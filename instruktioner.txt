@@ -1,0 +1,37 @@
+1.
+Installera Node om det ej redan finns installerat. Om Node
+redan är installerat men är lägre än version v14.18.0, kan
+det behöva uppdateras. Kontrollera genom att
+öppna en terminal, till exempel Powershell, och mata in:
+node -v
+
+För att hämta hem senaste versionen av Node, gå till:
+https://nodejs.org/en/
+
+2.
+Installera Angular. Öppna VS Code och skriv i en terminal:
+npm install -g @angular/cli
+
+3.
+Installera Json-Server. Använd återigen en terminal i VS Code och skriv:
+npm install -g json-server
+
+4.
+Öppna mappen med projektet i VS Code.
+
+5.
+För att starta Json-Server som kör databasen, navigera i en terminal
+i VS Code till mappen "mock-data", där filen "db.json" ligger.
+Mata in i samma terminal:
+json-server --watch db.json
+
+6.
+För att starta lokal server som kör webbsidan, öppna en ny powershell-terminal
+i VS Code och mata in:
+ng serve
+
+7.
+Nu bör sidan kunna öppnas på den localhost som visas på skärmen efter att kört "ng serve".
+
+8.
+Avsluta genom att stänga båda servrar. Tryck "CTRL + C" i respektive terminal.

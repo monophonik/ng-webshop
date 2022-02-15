@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { ErrorHandler, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { IProduct } from 'src/app/shared/models/Iproduct';
 
@@ -20,21 +20,8 @@ export class DataAccessService {
 
   constructor(
     private http: HttpClient
-  //   private options: {
-  //   observe?: 'response', //eller 'body'
-  //   responseType: 'json'
-  // }
   ) { }
 
-  // Funkar ej med async pipe i html
-  // showcaseProducts(): Observable<any> {
-  //   return this.http.get(this.url).pipe(map((data) => {
-  //     this.products = data;
-  //     console.log("Data access result: " + this.products)
-  //     return data;
-  //   }));
-  //   //return this.products;
-  // }
 
   db(): Observable<IDb> {
     return this.http.get<IDb>(this.url);
@@ -50,16 +37,24 @@ export class DataAccessService {
     return this.http.get<IProduct>(`${this.url}/products/${id}`);
   }
 
-  
-  updateProduct(id: number, toUpdate: string) {
+  //Funkar IProduct?
+  addProduct(product: any) {
+    
     var headers = new HttpHeaders().set('Content-Type', 'application/json');
-    this.http.patch(`${this.url}/products/${id}`, toUpdate, {headers: headers}).subscribe();
+    //Med eller utan /products ?
+    this.http.post(`${this.url}/products`, product, { headers: headers }).subscribe();
   }
 
-  // inStock(id: number): Observable<boolean> {
-  //   return this.http.get<IProduct>(`${this.url}/products/${id}`).pipe(item => );
-    
-  // }
+  updateProduct(id: number, toUpdate: string) {
+    var headers = new HttpHeaders().set('Content-Type', 'application/json');
+    this.http.patch(`${this.url}/products/${id}`, toUpdate, { headers: headers }).subscribe();
+  }
+
+  updateStock(id: number, amount: number) {
+    var headers = new HttpHeaders().set('Content-Type', 'application/json');
+    this.http.patch(`${this.url}/products/${id}`, { 'stock': amount }, { headers: headers }).subscribe();
+  }
+
 
   showcaseProductsWithMap() {
     return this.http.get(this.url).pipe(map((response: any) => response)) //Kanske ta bort <JSON>?

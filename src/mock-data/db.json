@@ -68,12 +68,12 @@
       "stock": 7,
       "showcase": false,
       "manufacturer": "Make Noise",
-      "name": "Maths",
-      "function": "Function generator",
-      "hp": "3",
-      "price": 123,
-      "image": "https://www.modulargrid.net/img/imagecache/300x381_20545.jpg",
-      "description": "MATHS builds on the tradition set into motion in the 1960s when Don Buchla adapted circuits found within analog computers for musical purposes. Buchla's Algebraic Processor, Model 257 and 281 changed the way music synthesizers utilize control voltages. MATHS continues this great tradition - sculpting the voltages we use to sculpt sounds."
+      "name": "modDemix",
+      "function": "VCA",
+      "hp": "6",
+      "price": 1299,
+      "image": "https://www.modulargrid.net/img/modcache/4343.f.jpg",
+      "description": "The modDemix features 2 identical direct-coupled balanced modulator circuits that may be used together or independently for Ring Modulation, VCA, Mixer, Signal Multiplication, Voltage Controlled Polarization, Attenuation and more."
     },
     {
       "id": 6,
@@ -82,13 +82,13 @@
       "dateadded": "2021-09-16",
       "stock": 2,
       "showcase": false,
-      "manufacturer": "Make Noise",
-      "name": "Maths",
-      "function": "Function generator",
-      "hp": "3",
-      "price": 123,
-      "image": "https://www.modulargrid.net/img/imagecache/300x381_20545.jpg",
-      "description": "MATHS builds on the tradition set into motion in the 1960s when Don Buchla adapted circuits found within analog computers for musical purposes. Buchla's Algebraic Processor, Model 257 and 281 changed the way music synthesizers utilize control voltages. MATHS continues this great tradition - sculpting the voltages we use to sculpt sounds."
+      "manufacturer": "Synthesis Technology",
+      "name": "E340 Cloud Generator",
+      "function": "VCO",
+      "hp": "14",
+      "price": 3799,
+      "image": "https://www.modulargrid.net/img/imagecache/228x413_304.jpg",
+      "description": "In its basic form, the E340 is a two-output wavetable VCO that generates 16 waveforms at once. Modular users quickly discover that in order to get large, fat notes, multiple oscillators are needed that are slightly detuned. This can get expensive quickly, and then you have to deal with the tracking differences, additional mults for the cables, and mixers for the outputs. The E340 combines all of these, eliminates the tracking errors, and adds the added dimension of being able to control just how buzzy the cloud can go. If spread and chaos are set to 0, the E340 behaves like a standard analog vco, but with a very pure sinewave output (less than 0.3% THD) and a standard sawtooth wave."
     },
     {
       "id": 7,
@@ -99,11 +99,41 @@
       "showcase": false,
       "manufacturer": "Tip Top Audio",
       "name": "Mantis",
-      "size": "6U",
+      "function": "Eurorack case",
       "hp": "104",
       "price": 3499,
       "image": "https://tiptopaudio.com/new/wp-content/uploads/2016/09/1280_01.png",
       "description": "Mantis case"
+    },
+    {
+      "id": 8,
+      "category": "Accessory",
+      "articlenr": "030001",
+      "dateadded": "2021-09-16",
+      "stock": 2,
+      "showcase": false,
+      "manufacturer": "4ms",
+      "name": "Row Power 35",
+      "function": "Power supply",
+      "hp": "4",
+      "price": 1399,
+      "image": "https://schneidersladen.de/media/image/20/49/9b/190379_1.jpg",
+      "description": "4ms Row Power is a clean, regulated, and protected power solution for eurorack systems. The module provides 35W of power, suited for any typical eurorack row (84HP to 168HP). Simply plug a universal power supply (laptop style) into either of the barrel plugs on the 4HP panel. Connect your modules via flying-bus cables or the Bus Stick. Multiple Row Power modules can be daisy-chained and be powered by a single power brick."
+    },
+    {
+      "id": 9,
+      "category": "Accessory",
+      "articlenr": "030002",
+      "dateadded": "2021-09-16",
+      "stock": 4,
+      "showcase": false,
+      "manufacturer": "Moog",
+      "name": "Mantis",
+      "function": "Cable",
+      "hp": "",
+      "price": 129,
+      "image": "https://cdn.shopify.com/s/files/1/0060/0532/5939/products/original_5603f0e7-85a6-4bb2-b934-624ac6237495.png?v=1546211553",
+      "description": "This set of Patch Cables for Mother-32 Synthesizer from Moog contains five 12' patch cables with 3.5 mm TS connectors. The cables are color-coded according to the grayscale from black to white for easy identification."
     }
   ]
 }

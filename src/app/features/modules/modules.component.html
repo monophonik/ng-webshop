@@ -1,11 +1,11 @@
-<p>Eurorack modules</p>
+<h4>Eurorack modules</h4>
 <ul>
-    <!-- fixa länk -->
+
     <ng-container *ngFor="let item of modules | async">
 
         <li>
             <a [routerLink]="['/product', item.id]" routerLinkActive="active" title="{{item.name}}">
-                Module name: {{item.name}}
+                {{item.name}}
                 <img src="{{item.image}}" alt="{{item.name}}">
             </a>
             <p>Price: {{item.price}} sek</p>
