@@ -89,9 +89,12 @@ export class CheckoutComponent implements OnInit {
     else {
       this.productsId.forEach(id => {
         //let oldStok;
+        console.log("Inne i forEach för patch...");
         let newStock;
         this.dataAccess.dbSingleProduct(id).subscribe(prod => {
-          newStock = (prod.stock--);
+          newStock = (prod.stock - 1);
+          console.log("Old stock: " + prod.stock);
+          console.log("New stock: " + newStock);
           this.dataAccess.updateStock(id, newStock);
         })
       })
@@ -135,7 +138,7 @@ export class CheckoutComponent implements OnInit {
     this.initForm();
     this.loadCart();
     this.orderForm.get('delivery')?.valueChanges.subscribe(value => {
-      this.totalShipping = this.totalPrice + value;
+      this.totalShipping = (this.totalPrice + Number(value));
     });
   }
 

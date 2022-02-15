@@ -5,7 +5,7 @@
       "category": "Module",
       "articlenr": "010001",
       "dateadded": "2021-09-09",
-      "stock": 6,
+      "stock": 4,
       "showcase": true,
       "manufacturer": "Make Noise",
       "name": "Maths",
@@ -20,7 +20,7 @@
       "category": "Module",
       "articlenr": "010002",
       "dateadded": "2021-09-10",
-      "stock": 5,
+      "stock": 4,
       "showcase": false,
       "manufacturer": "Intellijel",
       "name": "Quadrax",
@@ -50,7 +50,7 @@
       "category": "Module",
       "articlenr": "010004",
       "dateadded": "2021-09-23",
-      "stock": 3,
+      "stock": 2,
       "showcase": true,
       "manufacturer": "Make Noise",
       "name": "STO",
@@ -65,7 +65,7 @@
       "category": "Module",
       "articlenr": "010005",
       "dateadded": "2021-08-13",
-      "stock": 7,
+      "stock": 4,
       "showcase": false,
       "manufacturer": "Make Noise",
       "name": "modDemix",
@@ -95,7 +95,7 @@
       "category": "Case",
       "articlenr": "020001",
       "dateadded": "2021-09-16",
-      "stock": 4,
+      "stock": 3,
       "showcase": false,
       "manufacturer": "Tip Top Audio",
       "name": "Mantis",
@@ -103,7 +103,7 @@
       "hp": "104",
       "price": 3499,
       "image": "https://tiptopaudio.com/new/wp-content/uploads/2016/09/1280_01.png",
-      "description": "Mantis case"
+      "description": "The Tiptop Audio Mantis Eurorack Modular Synthesizer Case Blue is a Eurorack modular synthesizer case, featuring two rows of 104HP width, with three positions, a Zeus power supply, Z-Rails, and comes with green legs. The Mantis has two rows of 104HP for you to rack your modules. It comes fully powered and assembled; all you need to do is just drop in your modules and play. Featuring a sophisticated leg mechanism you can set it to three different positions; 0°, 45°, 90°. Mantis comes with a Zeus power supply and real Z-Rails according to Eurorack enclosure standards and not sliding nuts or wrong spacing. It also has keyed power connectors to help protect your modules from damage by plugging power in reverse."
     },
     {
       "id": 8,
@@ -128,12 +128,27 @@
       "stock": 4,
       "showcase": false,
       "manufacturer": "Moog",
-      "name": "Mantis",
+      "name": "Moog patch cables",
       "function": "Cable",
       "hp": "",
       "price": 129,
       "image": "https://cdn.shopify.com/s/files/1/0060/0532/5939/products/original_5603f0e7-85a6-4bb2-b934-624ac6237495.png?v=1546211553",
       "description": "This set of Patch Cables for Mother-32 Synthesizer from Moog contains five 12' patch cables with 3.5 mm TS connectors. The cables are color-coded according to the grayscale from black to white for easy identification."
+    },
+    {
+      "category": "Case",
+      "articlenr": "030004",
+      "dateadded": "2022-02-15",
+      "stock": "3",
+      "showcase": false,
+      "manufacturer": "Intellijel",
+      "name": "7U Performance case",
+      "function": "Case",
+      "hp": "84",
+      "price": "6199",
+      "image": "https://intellijel.com/wp-content/uploads/2017/12/IMG_2734-1024x683@2x.jpg",
+      "description": "Studio, cafe, stage, floor, coffee table—the 7U Performance case doesn't care where you play with it. Two 3U rows house and power all the modules you love (or one day hope to love), while the additional 1U row accommodates an extensive selection of specialized utility modules. Power, audio and MIDI/USB jacks on the back handle all the necessary inputs and outputs, ensuring all that rack space remains free for the \"fun\" modules. The lid has enough clearance to keep your system patched in transit, and two cases can be stacked with a set of joiners.",
+      "id": 10
     }
   ]
 }

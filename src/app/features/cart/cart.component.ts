@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //Flytta till CartService???
+    //För över till CartService
     this.loadCart();
 
   }

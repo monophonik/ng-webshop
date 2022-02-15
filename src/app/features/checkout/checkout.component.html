@@ -1,6 +1,6 @@
 <div *ngIf="!orderCompleted; else elseBlock">
 <h2>Checkout</h2>
-<div *ngIf="cartProducts">
+<div *ngIf="totalPrice != 0">
     <h3>Products in cart</h3>
     <ul class="cartlist">
         <ng-container *ngFor="let item of cartProducts">

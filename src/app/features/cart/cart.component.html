@@ -1,6 +1,7 @@
-<h3>This is your cart</h3>
 
-<div *ngIf="cartProducts">
+<!-- if funkar ej korrekt, förmodligen för att arrayen aldrig blir null -->
+<div *ngIf="totalPrice != 0; else elseBlock">
+<h3>This is your cart</h3>
 <ul class="cartlist">
     <ng-container *ngFor="let item of cartProducts">
         <li>
@@ -19,5 +20,7 @@
 <button id="checkoutBtn" [routerLink]="['/checkout']" routerLinkActive="active" title="Checkout">Checkout</button>
 </div>
 <ng-template #elseBlock>
-    <p>Your cart is empty</p>
+    <div>
+        <h3>Your cart is empty</h3>
+    </div>
 </ng-template>
